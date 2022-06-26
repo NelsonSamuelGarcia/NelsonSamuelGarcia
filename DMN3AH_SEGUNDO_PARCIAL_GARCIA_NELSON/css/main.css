@@ -1,0 +1,316 @@
+@font-face {
+    font-family: futult;
+    src: url(/fonts/FutuLt.ttf);
+
+}
+
+
+@font-face {
+    font-family: futura bk bt Book;
+    src: url(/fonts/Futura\ Bk\ BT\ Book.ttf);
+
+}
+
+
+@font-face {
+    font-family: Futura Hv BT;
+    src: url(/fonts/FutuHv.ttf);
+
+}
+
+@font-face {
+    font-family: Futura Md BT;
+    src: url(/fonts/Futura\ Md\ BT\ Medium.ttf);
+
+}
+
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+
+
+
+
+}
+
+header {
+    width: 50vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5vw;
+    margin: 2vw;
+}
+
+h1 {
+    /* color: rgb(0, 204, 255); */
+    font-family: futult;
+    font-size: 1.5vw;
+    letter-spacing: 0.5vw;
+   
+     
+}
+
+section {
+    width: 15vw;
+    height: 41vw;
+    position: absolute;
+    top: 0;
+    left: 3vw;
+    margin: 2vw;
+    z-index: 8;
+    display: grid;
+
+
+    padding: 1vw;
+    border-radius: 0.5vw;
+  
+    grid-template-rows:2fr 2fr 1fr 3fr;
+    
+    transition: all 1s ease-in-out;
+  
+   box-shadow:  0px 0px 0px rgba(0, 0, 0, .1);
+}
+
+#botonPersonajes {
+
+    display: grid;
+    width: 48vw;
+   /*  height: 36vw; */
+    grid-template: repeat(3, 12vw) / repeat(4,12vw);
+    margin-bottom: 4vw;
+    padding: 1vw;
+    border-radius: 0.5vw;
+   /*   background-color: rgb(146, 131, 43); */
+    
+
+}
+
+.titulos {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    top: 5%;
+    left: 5%;
+
+  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2vw;
+    
+   
+    font-family: futult;
+    font-size: 2vw;
+    letter-spacing: 0.5vw;
+    color: white;
+    border: none;
+    
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .1),
+        inset 2px 2px 3px rgba(255, 255, 255, .01),
+        -6px -6px 10px rgba(255, 255, 255, .05),
+        6px 6px 8px rgba(255, 255, 255, .075),
+        6px 6px 10px rgba(0, 0, 0, .2),
+        inset -2px -2px 3px rgba(0, 0, 0, .02);
+}
+
+
+#toques {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 90%;
+    height: 100%;
+    position: relative;
+    top: 5%;
+    left: 5%;
+    
+    display: grid;
+    grid-template: repeat(3, 5vw) / repeat(1,5vw);
+    justify-content: center;
+    align-items: center;
+    
+
+    border-radius: 0.2vw;
+    
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .1),
+        inset 2px 2px 3px rgba(255, 255, 255, .01),
+        -6px -6px 10px rgba(255, 255, 255, .05),
+        6px 6px 8px rgba(255, 255, 255, .075),
+        6px 6px 10px rgba(0, 0, 0, .2),
+        inset -2px -2px 3px rgba(0, 0, 0, .02);
+}
+
+
+
+#toques p {
+    height: 1vw;
+    color: aqua;
+    font-family: Futura Md BT;
+    font-size: 1.5vw;
+    letter-spacing: 0.5vw;
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: 1vw;
+}
+
+#toques p:last-child {
+    background: linear-gradient(-45deg,rgb(129, 0, 0), rgb(110, 0, 0));
+    border-radius: .5vw;
+
+}
+
+
+
+
+
+
+#resultado {
+    
+    width: 10vw;
+    height: 10vw;
+    position: fixed;
+    top: 35vh;
+    z-index: 9;
+    display: grid;
+
+    padding: 1vw;
+    border-radius: 0.5vw;
+    grid-template: repeat(2, 5vw) / repeat(1, 10vw);
+   visibility: hidden;
+   box-shadow:  10px 10px 10px rgba(0, 0, 0, .3);
+   background: linear-gradient(-45deg,rgb(44, 44, 44), rgb(29, 29, 29));
+    
+}
+#resultado p {
+   display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  font-family: Futura Md BT;
+ 
+    
+}
+#resultado button {
+    font-family: Futura Md BT;
+    font-size: 0.9vw;
+    letter-spacing: 0px;
+   border: none;
+    width: 90%;
+    height: 40%;
+    top: 5%;
+    left: 5%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 1.5vw;
+border-radius: .3vw;
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, .02),
+    inset 2px 2px 2px rgba(255, 255, 255, .01),
+    -6px -6px 10px rgba(255, 255, 255, .001),
+    6px 6px 8px rgba(255, 255, 255, .01),
+    5px 5px 4px rgba(0, 0, 0, .3),
+    inset -2px -2px 2px rgba(0, 0, 0, .1);
+   
+    
+}
+
+#botonPersonajes button {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    top: 5%;
+    left: 5%;
+
+   
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2vw;
+  
+   
+    font-family: futult;
+    font-size: 2vw;
+    letter-spacing: 0.5vw;
+    color: white;
+    border: none;
+  
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .01),
+        inset 2px 2px 3px rgba(255, 255, 255, .01),
+        -6px -6px 10px rgba(255, 255, 255, .05),
+        6px 6px 10px rgba(0, 0, 0, .2),
+        inset -2px -2px 3px rgba(0, 0, 0, .02);
+        
+}
+
+
+
+button,
+header,
+body, #puntajes {
+  
+    background: linear-gradient(-45deg,rgb(36, 36, 36), rgb(29, 29, 29));
+}
+
+h1, button, p {
+    color: aqua;
+}
+
+#botonPersonajes, #puntajes,
+header, #toques, section, #cuentaToques {
+    box-shadow: -4px -4px 5px rgba(255, 255, 255, 0),
+        inset 4px 4px 5px rgba(0, 0, 0, 0.5),
+        inset -4px -4px 5px rgba(255, 255, 255, 0.05),
+        4px 4px 5px rgba(0, 0, 0, 0);
+}
+
+
+
+ button:hover {
+    background: linear-gradient(-45deg,rgb(129, 0, 0), rgb(110, 0, 0));
+ }
+ 
+button img {
+    width: 0%;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 15vw;
+    width: 100vw;
+background-color: black;
+
+}
+
+footer p {
+    font-family: Futura Md BT;
+    font-size: 0.9vw;
+    letter-spacing: 2px;
+    color: white;
+}
